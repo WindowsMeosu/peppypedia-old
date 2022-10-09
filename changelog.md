@@ -1,3 +1,8 @@
+## peppypedia ver 0.2.6.4 (0.2.6)
+#### Open Beta
+#### 10/09/2022
+* pages now available
+* pages should sort by player/map date.
 ## peppypedia ver 0.2.6.3 (0.2.6)
 #### Open Beta
 #### 10/09/2022
