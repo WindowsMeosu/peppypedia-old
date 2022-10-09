@@ -1,6 +1,11 @@
 ## peppypedia ver 0.2.6.3 (0.2.6)
 #### Open Beta
 #### 10/09/2022
+* pages now available
+* pages should sort by player/map date.
+## peppypedia ver 0.2.6.3 (0.2.6)
+#### Open Beta
+#### 10/09/2022
 * https://gitmilotilo.github.io/ is now a valid link.
 * pages soon to be added
 * added [about.md](https://github.com/gitMiloTilo/peppypedia/blob/master/about.md)
