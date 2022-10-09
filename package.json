@@ -1,6 +1,6 @@
 {
   "name": "peppypedia",
-  "version": "0.2.6.3",
+  "version": "0.2.6.4",
   "description": "package.json",
   "dependencies": {
     "@primer/css": "2.0.1"
