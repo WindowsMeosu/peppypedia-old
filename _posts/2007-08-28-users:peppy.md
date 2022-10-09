@@ -1,7 +1,7 @@
 ID:2
 _____________
-this page is a stub, feel free to add on to any anything
--
+
+<s> this page is a stub, feel free to add on to any anything </s>
 # peppy
 peppy is the creator of osu!(stable/beta/cutting-edge), osu!stream, and osu!lazer.
 ## History ##
