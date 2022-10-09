@@ -1,9 +1,11 @@
 {
-  "name": "osu-meerkatv2",
-  "version": "0.6.0",
+  "name": "peppypedia",
+  "version": "0.2.5",
   "description": "package.json",
   "dependencies": {
-    "@primer/css": "17.0.1"
+    "@primer/css": "2.0.1"
   },
   "license": "MIT"
 }
+
+//package copied from osu!meerkatv2
