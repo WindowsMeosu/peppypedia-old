@@ -1,7 +1,4 @@
 ---
-
 ---
 
-@import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
+@import "jekyll-theme-minimal";
