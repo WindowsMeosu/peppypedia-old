@@ -1,0 +1,9 @@
+{
+  "name": "osu-meerkatv2",
+  "version": "0.6.0",
+  "description": "package.json",
+  "dependencies": {
+    "@primer/css": "17.0.1"
+  },
+  "license": "MIT"
+}
