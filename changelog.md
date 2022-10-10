@@ -1,6 +1,6 @@
 ## peppypedia ver 0.2.6.5 (0.2.6)
 #### Open Beta
-#### 10/09/2022
+#### 10/10/2022
 * added 404.html for 404 errors
 ## peppypedia ver 0.2.6.4 (0.2.6)
 #### Open Beta
