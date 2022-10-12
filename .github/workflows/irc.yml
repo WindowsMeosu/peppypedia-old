@@ -1,4 +1,5 @@
-on: [push]
+on:
+workflow_dispatch
 
 jobs:
   deploy:
@@ -24,5 +25,6 @@ jobs:
       run: test "${{ steps.response.outputs.response }}" = ok
     - name: Deploy
       run: ./deploy.sh
+      
       
     
