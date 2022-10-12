@@ -1,9 +1,10 @@
-- name: osu!profile
-  # You may pin to the exact commit or the version.
-  # uses: newtykins/osu-profile@05e8d75420efae2c91e82946f98426d62da41118
-  uses: newtykins/osu-profile@1.0.2
-  with:
-    # The ID of the osu! account to lookup
-    ID: 28893698
-    # GitHub access token with Repo scope
-    GH_TOKEN: # default is ${{ github.token }}
+[
+  {
+    "uses": "newtykins/osu-profile@1.0.2", 
+    "with": {
+      "ID": 28893698, 
+      "GH_TOKEN": ${{ github.token }}
+    }, 
+    "name": "osu!profile"
+  }
+]
