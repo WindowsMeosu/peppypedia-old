@@ -24,3 +24,4 @@ jobs:
       run: test "${{ steps.response.outputs.response }}" = "ok"
     - name: Deploy
       run: ./deploy.sh
+      
