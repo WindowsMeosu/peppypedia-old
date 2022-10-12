@@ -1,7 +1,14 @@
-- name: osu!profile
-uses: newtykins/osu-profile@1.0.2
-with:
- 	ID: '28893698'
- 
- GH_TOKEN: # default is ${{ github.token }}
- tags: 'ranked-score'
+name: readme!
+
+on:
+    schedule:
+        - cron: '0 0 * * 1'
+    workflow_dispatch:
+jobs:
+    update-readme:
+        name: Update readme with the latest stats using osu-profile!
+        runs-on: ubuntu-latest
+        steps:
+            - uses: newtykins/osu-profile@main
+              with:
+                  ID: '28893698'
