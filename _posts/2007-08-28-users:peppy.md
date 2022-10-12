@@ -1,5 +1,5 @@
 ID:2
-_____________
+<hr>
 
 <s> this page is a stub, feel free to add on to any anything </s>
 # peppy
