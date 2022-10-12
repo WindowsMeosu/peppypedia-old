@@ -10,7 +10,7 @@ jobs:
       uses: Gottox/irc-message-action@v2
       with:
         channel: '##peppypedia'
-        nickname: peppy
+        nickname: peppypedia
         response_allow_from: MiloTilo, KittenBot, ChanServer
         # 5 hours:
         response_timeout: 18000
