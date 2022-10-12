@@ -1,10 +1,7 @@
-[
-  {
-    "uses": "newtykins/osu-profile@1.0.2", 
-    "with": {
-      "ID": 28893698, 
-      "GH_TOKEN": ${{ github.token }}
-    }, 
-    "name": "osu!profile"
-  }
-]
+- name: osu!profile
+uses: newtykins/osu-profile@1.0.2
+with:
+ 	ID: '28893698'
+ 
+ GH_TOKEN: # default is ${{ github.token }}
+ tags: 'ranked-score'
