@@ -1,3 +1,7 @@
+## peppypedia ver 0.2.6.6 (0.2.6)
+#### Open Beta
+#### 10/11/2022
+* IRC server now has peppybot (I'll register soon) and KittenBot (registered + hosted on a private server)
 ## peppypedia ver 0.2.6.5 (0.2.6)
 #### Open Beta
 #### 10/10/2022
