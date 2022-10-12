@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-peppypedia, V.2.6.
+peppypedia, V.2.7
 
 [Windows_Me](https://github.com/gitMiloTilo) /
 [qwrmolly](https://github.com/qwrmolly)
