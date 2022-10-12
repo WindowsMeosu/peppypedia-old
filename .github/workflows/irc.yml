@@ -1,6 +1,5 @@
 on:
-workflow_dispatch:
-
+ [push]:
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -11,18 +10,11 @@ jobs:
       uses: Gottox/irc-message-action@v2
       with:
         channel: '##peppypedia'
-        nickname: peppybot
+        nickname: peppybot2
         response_allow_from: MiloTilo, KittenBot, ChanServer
         # 5 hours:
         response_timeout: 18000
-        message: |-
-          ${{ github.actor }} pushed something: ${{ github.event.compare }}
-          Please acknowledge with "ok"!
-    # An Acknowledger can reply to this with "mynickname: ok"
-    - name: Print Acknowledger
-      run: echo "${{ steps.response.outputs.response_from }}"
-    - name: Check Acknowledge
-      run: test "${{ steps.response.outputs.response }}" = ok
+          
     - name: Deploy
       run: ./deploy.sh
       
