@@ -1,0 +1,9 @@
+- name: First interaction
+  uses: actions/first-interaction@v1.1.1
+  with:
+    # Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}
+    repo-token: {{ secrets.GITHUB_TOKEN }}
+    # Comment to post on an individual's first issue
+    issue-message: Appears this is your first issue, this will be handled by @qwrmolly or @gitMiloTilo.
+    # Comment to post on an individual's first pull request
+    pr-message: Appears this is your first pull request, this will be handled by @qwrmolly. (most of the time)
