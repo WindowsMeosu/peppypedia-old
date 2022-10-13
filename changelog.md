@@ -1,3 +1,8 @@
+## peppypedia ver 0.2.6.7 (0.2.6)
+#### Open Beta
+#### 10/13/2022
+* merge master into testing
+* some other stuff ig
 ## peppypedia ver 0.2.6.6 (0.2.6)
 #### Open Beta
 #### 10/12/2022
