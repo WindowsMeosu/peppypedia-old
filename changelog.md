@@ -1,3 +1,15 @@
+## peppypedia ver 0.2.6.7 (0.2.6)
+#### Open Beta
+#### 10/13/2022
+* merge master into testing
+* some other stuff ig
+## peppypedia ver 0.2.6.6 (0.2.6)
+#### Open Beta
+#### 10/12/2022
+* readme.md is now redirects when clicking on "About"
+* ^ fixed for real now
+* IRC server now has peppybot (I'll register soon) and KittenBot (registered + hosted on a private server)
+* fix some mistakes in the posts
 ## peppypedia ver 0.2.6.5 (0.2.6)
 #### Open Beta
 #### 10/10/2022

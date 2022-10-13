@@ -1,0 +1,22 @@
+on:
+ push:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy Chain
+    steps:
+    - name: Acknowledge
+      id: acknowledge
+      uses: Gottox/irc-message-action@v2
+      with:
+        channel: '##peppypedia'
+        nickname: peppybot
+        response_allow_from: MiloTilo, KittenBot, ChanServer
+        # 5 hours:
+        response_timeout: 18000
+          
+    - name: Deploy
+      run: ./deploy.sh
+      
+      
+    

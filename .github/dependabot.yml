@@ -18,3 +18,5 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    
+    # expect merging from osu!meerkat soon
