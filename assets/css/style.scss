@@ -7,3 +7,4 @@ $grey-color-dark:  #5e5e5e;
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+  "confirmDialog.css"
