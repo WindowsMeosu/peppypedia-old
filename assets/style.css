@@ -1,0 +1,962 @@
+body{
+  background: radial-gradient(circle, rgb(3, 6, 9) 0%, rgb(4, 8, 12) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: arial;
+}
+
+img{
+  border-radius: 2.2vw;
+  height: 120px;
+  width: 120px;
+}
+
+td{
+  padding: 0.5vw;
+}
+
+td a{
+  color: rgb(141, 244, 255);
+  text-shadow:  0px 0px 20px #ffffff;
+}
+
+:root{
+  --transition-speed: 250ms;
+} 
+
+.graph-style-box{
+  border: 0px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -1px rgb(0, 0, 0);
+  font-size: 30px;
+  text-align: center;
+  display: block;
+}
+
+#player-progress.line{
+  height: 300px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.legend {
+  flex-shrink: 3;
+  color: #ccc;
+  background-color: #333;
+  box-shadow: 0 0 15px #000;
+}
+
+.player_info{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Osu-triangles.svg/1200px-Osu-triangles.svg.png");
+  background-size: 100%;
+  box-shadow: 3px 3px 100px 20px rgba(7, 65, 95, 0.425);
+  position: relative;
+  transition: ease-out var(--transition-speed);
+  width: 35vw;
+  min-width: fit-content;
+  height: 5vh;
+  border-radius: 1vw;
+  margin-left: 3vw;
+  display: block;
+  z-index: 1;
+}
+
+.team_info_wrapper{
+  transition: ease-in-out 2000ms;
+}
+
+.team_info{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Osu-triangles.svg/1200px-Osu-triangles.svg.png");
+  background-size: 100%;
+  box-shadow: 8px 0px 0px 0px rgba(0, 0, 0, 0.425);
+  position: relative;
+  transition: ease-out var(--transition-speed);
+  min-width: 15vw;
+  width: 30vw;
+  height: 6vh;
+  border-radius: 1vw;
+}
+
+.team_info h1{
+  font-size: 3vh;
+  margin-left: 0.1vw;
+  margin-right: 0.1vw;
+}
+
+.team_info h2{
+  font-size: 2vh;
+  color: white;
+}
+
+.teams{
+  position: absolute;
+  right: 2vw;
+  left: 64vw;
+}
+
+.player_info_wrapper{
+  transition: ease-in-out 2000ms;
+}
+
+.player_info:hover{
+  transition: var(--transition-speed) ease-in;
+  opacity: 1.0;
+  box-shadow: 2px 2px 10px 1px rgba(41, 149, 202, 0.907);
+  background-size: cover;
+  z-index: 9999;
+}
+
+.level {
+  transition: all var(--transition-speed) ease-out;
+  position: relative;
+  opacity: 0;
+  bottom: 10%;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  padding-left: 0px;
+  font-family: arial;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.player_info .namebox{
+  margin: 0px;
+  text-align: left;
+  font-size: 3vh;
+  text-shadow: 3px 3px 0px #000000;
+  white-space: nowrap;
+}
+
+/*.map_info{
+  opacity: 0%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 3vw;
+  width: 1vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1vw;
+  transition: all var(--transition-speed) ease-in;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 2px 2px 7px #CECECE;
+  box-shadow: 0 0 8px 8px white inset;
+  text-align: left;
+  position: relative;
+  top: -100%;
+}*/
+
+/*.player_info:hover .map_info{
+  transition: all var(--transition-speed) ease-out;
+  opacity: 100%;
+  position: relative;
+  top: 0.3vw;
+  width: 40vw;
+  height: 7vw;
+}*/
+
+.player_info img {
+  float:left;
+  position: relative;
+  width: 5vh;
+  height: 5vh;
+  transition: all var(--transition-speed) ease-out;
+  display: block;
+  border-radius: 1.0vw;
+  box-shadow: 3px 0px 0px #00000043;
+  margin-right: 6px;
+  object-fit: cover;
+}
+
+.namebox{
+  transition: all var(--transition-speed) ease-out;
+}
+
+.gameBox{
+  position: relative;
+  border: 5px hidden #1C6EA4;
+  border-radius: 15px;
+  background: radial-gradient(circle, rgb(20, 48, 56) 0%, rgb(33, 180, 203) 35%, rgb(0, 0, 0) 100%);
+  padding-bottom: 2vw;
+  box-shadow: 5px 5px 15px 5px #000000;
+  margin: 0 auto;
+}
+
+.recent_info{
+  text-color: grey;
+  opactiy: 50%;
+  background-color: #363636;
+  height: 20px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 110%;
+  text-align: center;
+}
+
+@keyframes introtop {
+  from {background-color: white;}
+  to {background-color: #266849;}
+}
+
+@keyframes player_info_transition {
+  from{
+    width: 90%;
+    height: 32px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -3px rgb(255, 255, 255);
+  }
+  to{
+    opacity: 1.0;
+    background-color:rgba(255, 239, 213, 0);
+    width: 90%;
+    height: 246px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px -3px rgb(255, 255, 255);
+  }
+}
+
+
+.match-teams{
+  text-align: center;
+  border-radius: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.match{
+  text-align: center;
+  border-radius: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.rectangle_menu {
+  min-height: 7vw;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Osu-triangles.svg/1200px-Osu-triangles.svg.png");
+  background-color: #002e35;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 6vw;
+  border-radius: 1vw;
+  text-align: center;
+  font-family: Aller-Bold, sans-serif;
+  object-fit: fill;
+}
+
+
+.detailbox{
+  
+}
+
+.avatar{
+  opacity: 0;
+}
+
+a{
+  font-size: 50%;
+  color: rgb(0, 255, 255);
+  text-style: bold;
+  transition: all var(--transition-speed) ease-out;
+  text-decoration: none;
+}
+
+.name{
+  color:rgb(255, 255, 255)
+}
+
+.player_info:hover .namebox{
+  color: rgb(140, 231, 247);
+  transition: all var(--transition-speed) ease-in;
+  text-shadow: 1.5px 1.5px 1px #ffffff;
+}
+
+.player_info:hover .namebox a{
+  transition: all var(--transition-speed) ease-in;
+  text-shadow: 1.5px 1.5px 5px #9bceed;
+}
+
+.extra_text{
+  opacity: 0%;
+}
+
+.player_info:hover .extra_text{
+  opacity: 100%;
+  font-size: 124%;
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px 8px #f4f4f4;
+  font-weight: bold;
+}
+
+.teammode{
+  text-transform: uppercase;
+  background: linear-gradient(to right, #0ccdeb 0%, #114663 100%);
+  border-radius: 5vw;
+}
+
+.single{
+  text-transform: uppercase;
+  background: linear-gradient(to right, #0ccdeb 0%, #114663 100%);
+  border-radius: 5vw;
+}
+
+.title{
+
+}
+
+.map_title{
+  margin-top: 1px;
+  text-align: center;
+}
+
+.grade{
+  display: flex;
+  flex: row;
+  text-shadow: 4px 4px 8px #000000;
+}
+
+.addedscore{
+  position: relative;
+  opacity: 0;
+  animation: scoreAdd 2000ms;
+}
+
+.score{
+  text-shadow: 2px 5px 0px #000000;
+  margin-left: auto;
+  text-align: right;
+  font-size: 68%;
+  transition: all var(--transition-speed) ease;
+}
+
+.player_info:hover .score{
+  margin-left: auto;
+  text-align: right;
+  text-shadow: 1.5px 1.5px 2px #ffffff;
+}
+
+.flexify {
+  display: flex;
+  flex: row;
+}
+
+.player_info:hover a{
+  text-shadow: 5px 6px 0px rgb(0, 0, 0);
+}
+
+.playcount {
+  font-weight: bold;
+  font-family: arial;
+  opacity: 0;
+  transition: all 300ms ease-out;
+}
+
+.player_info:hover .playcount{
+  transition: all 300ms ease-in;
+  opacity: 1;
+}
+
+.teambox {
+  flex: column;
+  position: relative;
+  transition: ease-out 0.3s;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Osu-triangles.svg/1200px-Osu-triangles.svg.png");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-color: rgb(32, 32, 32);
+  width: 95vw;
+  font-size: 1.7vw;
+  border-radius: 1vw;
+  box-shadow: 5px 5px 15px 5px #0000005e;
+  margin-bottom: 10px;
+}
+
+.teambox-content{
+  position: relative;
+  transition: ease-out 0.3s;
+  color: rgb(150, 150, 150);
+  border-radius: 1vw;
+  box-shadow: 5px 5px 15px 5px #0000005e;
+}
+
+.weekly_map {
+  transition: ease-out 0.3s;
+  width: 90%;
+  height: 32px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -3px rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.white-text{
+  color: rgb(141, 244, 255);
+  text-shadow:  0px 0px 20px #ffffff;
+}
+
+.warning{
+  background-image: url(https://cdn.discordapp.com/attachments/901559340903833620/923068720253927485/drone-view-of-the-ocean-waves-splashing-video-id1170947236.png);
+  border: 0.4vw solid rgb(0, 187, 255);
+  border-radius: 5px;
+  width: 55vw;
+  box-shadow: 5px 5px 15px -3px rgba(0, 221, 255, 0.571);
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 0.6vw #000000;
+  font-size: 2.2vw;
+  margin: 0 auto;
+  margin-top: 7px;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.warning-text{
+  color: rgb(0, 208, 255);
+  font-style: bold;
+}
+
+.bg-image {
+  filter: blur(0.3vw);
+  top: 0;
+  overflow: hidden;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  background-size: cover;
+}
+
+.fade{
+  opacity: 0;
+  z-index: 1;
+}
+
+.table-thing{
+  border: 1px solid rgb(118, 214, 255);
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 17px 4px #72e1ff61;
+}
+
+ul{
+  margin: 0 auto;
+  padding: 1px 0px;
+}
+
+.bg-image img {
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 1s;
+}
+
+.match-box {
+  display: block;
+  text-align: center;
+  font-size: 5vw;
+  border: 0.2vw solid rgba(127, 221, 255, 0.667);
+  border-radius: 2vw;
+  width: 70vw;
+  min-height: 86px;
+  margin: auto;
+  box-shadow: 5px 5px 15px 5px #00c8ff61;
+  block-size: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+.match-box a{
+  position: relative;
+  z-index: 1;
+  color: #49b6ff;
+}
+
+input{
+  display: block;
+  margin: 0 auto;
+}
+
+.data-box{
+  border: 0.2vw solid rgba(127, 221, 255, 0.667);
+  background: -webkit-linear-gradient(#ffffff95 10%, #08edf552 80%);
+  color: #00bad6;
+  text-shadow: 4px 4px 20px #ffffff;
+  border-radius: 4vw;
+  box-shadow: 1px 1px 9px 1px #a0fcffa1;
+  padding: 1vw;
+  margin: auto;
+}
+
+.match-data {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 3vw;
+  padding: 1%;
+  z-index: 1;
+  position: relative;
+}
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  background: rgba(255,255,255,0.3);
+  background-image: linear-gradient(to top, #00000095 10%, #00000000 80%);
+}
+
+@keyframes scoreAdd{
+  0% {
+    font-size: 0px;
+    right: -10vw;
+    top: -2vw;
+    opacity: 1;
+  }
+  50%{
+    top: -7vw;
+    right: -17vw;
+    font-size: 4vw;
+    transition: ease-in;
+    opacity: 1;
+  }
+  100%{
+    top: -12vw;
+    right: -30vw;
+    font-size: 10vw;
+    transition: ease-out;
+    opacity: 0;
+  }
+}
+
+@keyframes scoreSubmit{
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  50%{
+    top: 50px;
+    transition: ease-in;
+    opacity: 1;
+  }
+  100%{
+    top: 200px;
+    transition: ease-out;
+    opacity: 0;
+  }
+}
+
+a:hover{
+  transition: ease 500ms;
+  color: #d3f9ff;
+}
+mi
+.dropdown-content{
+  opacity: 0;
+  display: none;
+  position: absolute;
+  min-width: 20px;
+  min-height: 20px;
+  background-color: #00424ba0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-decoration: none;
+  list-style: none;
+  transition: ease 300ms;
+  overflow: hidden;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-decoration: overline;
+  list-style: none;
+  transition: ease 500ms;
+}
+
+.dropdown-special{
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  transition: ease 500ms;
+}
+
+.dropdown:hover .dropdown-content {
+  transition: ease 500ms;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  opacity: 100;
+  display: block;
+}
+
+.dropdown-content li:hover{
+  transition: ease 300ms;
+  background-color: #0ccdeb;
+}
+
+p{
+  font-size: 60%;
+  color: white;
+  text-shadow: 1px 1px 10px whitesmoke;
+  margin: 0 auto;
+}
+
+label{
+  color: white;
+  text-shadow: 1px 1px 10px whitesmoke;
+  width: fit-content;
+  height: fit-content;
+}
+
+.api-block{
+  width: 224px;
+  height: 224px;
+  border-radius: 2vw;
+  box-shadow: 1px 1px 9px 1px #a0fcffa1;
+  background-color: #00bad6;
+}
+
+.api-block h1{
+    padding-top: 40%;
+}
+
+.api-block-extra{
+  position: relative;
+  left: -100px;
+  top: -70%;
+  opacity: 0;
+  border-radius: 2vw;
+  box-shadow: 2px 2px 9px 1px #004e51;
+  background-color:#1ca1fa;
+  padding: 2vw;
+  padding-right: 7vw;
+  transition: 300ms all;
+}
+
+.api-block:hover .api-block-extra{
+   position: relative;
+  left: 220px;
+  width: 124px;
+  height: 200px;
+  opacity: 1;
+  transition: 300ms all;
+}
+
+.live-status{
+  color: rgb(255, 255, 255);
+  background-color: #002e35;
+  min-width: fit-content;
+  box-shadow: inset 1px 1px 1px 1px #000000;
+  width: 24vw;
+  height: 5vh;
+  overflow: hidden;
+  border-radius: 1vw;
+  transform: translateX(-100%);
+  transition: transform 0.3s linear;
+  padding-left: 5vw;
+  font-size: 1vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.live-status.active{
+  background-repeat: no-repeat;
+  transition: ease 1s;
+  transform: translateX(-4.2vw) !important;
+  box-shadow: 8px 0px 0px 0px rgba(0, 0, 0, 0.425);
+}
+
+.player_info:hover .live-status.active{
+  box-shadow: 8px 0px 0px 0px rgb(255, 255, 255);
+}
+
+.live-status .map-info{
+  transition: ease;
+  opacity: 0;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.live-status.active .map-info{
+  transition: ease;
+  opacity: 1;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 1vw;
+}
+
+.live-status .right{
+  margin-left: auto;
+}
+
+.live-status .gameplay-mods{
+  margin: 0;
+}
+
+.live-status .gameplay-score{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.live-status .gameplay-bottom{
+  transition: ease;
+  opacity: 0;
+  display: flex;
+}
+
+.live-status.active .gameplay-bottom{
+  transition: ease;
+  opacity: 1;
+  display: flex;
+}
+
+.live-status .gameplay-top{
+  transition: ease;
+  opacity: 0;
+  display: flex;
+}
+
+.live-status.active .gameplay-top{
+  transition: ease;
+  opacity: 1;
+  display: flex;
+}
+
+.live-status .gameplay-bottom .gameplay-accuracy{
+  margin: 0;
+}
+
+.live-status .gameplay-bottom .gameplay-mods{
+  margin: 0;
+}
+
+.live-status .gameplay-bottom .gameplay-combo{
+  margin: 0;
+}
+
+.live-status .gameplay-bottom .max-gameplay-combo{
+  margin: 0;
+  padding-right: 1vw;
+}
+
+
+.live-status .gameplay-grade{
+  text-shadow: 4px 4px 8px #000000;
+  font-size: 1.9vh;
+}
+
+.live-status .gameplay-100{
+  margin: 0;
+}
+
+.live-status .gameplay-50{
+  margin: 0;
+}
+
+.live-status .gameplay-pp{
+  margin: 0;
+  padding-right: 1vw;
+}
+
+.live-status .gameplay-misses{
+  margin: 0;
+}
+
+.live-status .gameplay-top .gameplay-grade{
+  margin: 0;
+}
+
+.live-status .gameplay-top .gameplay-100{
+  margin: 0;
+}
+
+.live-status .gameplay-top .gameplay-50{
+  margin: 0;
+}
+
+.live-status .gameplay-top .gameplay-misses{
+  margin: 0;
+}
+
+
+.status{
+  color: grey;
+  margin-left: 5vw;
+}
+
+.status.active{
+  color:white;
+  text-shadow: 1px 1px 1px #000;
+  margin-left: 5vw;
+}
+
+.icon{
+  font-size: 1vh;
+}
+
+.health{
+  text-shadow: 2px 5px 0px #000000;
+  margin-left: auto;
+  text-align: right;
+  transition: all var(--transition-speed) ease;
+}
+
+.hunger{
+  text-shadow: 2px 5px 0px #000000;
+  margin-left: auto;
+  text-align: right;
+  transition: all var(--transition-speed) ease;
+}
+
+.profile-info{
+  transition: all var(--transition-speed);
+  display: flex;
+  flex: row;
+  text-decoration: underline;
+  justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-shadow:rgb(0, 0, 0, 0);
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: rgb(0, 38, 38);
+  border-radius: 80px;
+}
+
+.username{
+  text-align: center;
+}
+
+.user-details{
+  transition: all var(--transition-speed) transform;
+}
+
+.user-details h2{
+  color: white;
+  text-align: center;
+  opacity: 1;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.gqdata{
+  position: absolute;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: all var(--transition-speed) transform;
+}
+
+.backrooms{
+  position: absolute;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: all var(--transition-speed) transform;
+}
+
+.fadeaway{
+  animation: fade-away 1000ms;
+}
+
+.fadein{
+  animation: fade-in 1000ms;
+}
+
+@keyframes fade-away{
+  50%{
+    top: 10px;
+    transition: ease-out;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in{
+  50%{
+    top: -10px;
+    transition: ease-out;
+    opacity: 1;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
