@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<html>
+  <head>
+    {% block head %}
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+      {% if request.cookies.get('userID') != None %}
+        <h1>You have created an <a style="font-size: 2em;" href="/user/{{ request.cookies.get('userID') }}">account!</a></h1>
+      {% else %}
+        <h1>You should like <a style="font-size: 2em;" href="/account/create">create an account</a></h1>
+      {% endif %}
+    {% endblock %}
+  </body>
+</html>
