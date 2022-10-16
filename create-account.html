@@ -8,16 +8,12 @@
   </head>
   <body>
     {% block body %}
-      <h2 style="font-style: bold; color: red; text-align: center;">{{ warning }}</h2>
+      <h2 style="font-style: bold; color: red; text-align: center;">{{ meh }}</h2>
       <form action = "/create-account" method = "POST">
         <p><h1>Enter username</h1></p>
         <p><input type = 'text' name = 'nm'/></p>
         <p><h1>Enter password</h1></p>
         <p><input type = 'password' name = 'pw'/></p>
-        <p><h1>Enter osu id if you have an account</h1></p>
-        <p><input type = 'number' name = 'osuid'/></p>
-        <p><h1>Tell people about your self</h1></p>
-        <p><input type = 'text' name = 'am'/></p>
         <p><input type = 'submit' value = 'Create'/></p>
       </form>
     {% endblock %}
