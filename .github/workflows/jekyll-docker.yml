@@ -8,6 +8,8 @@ on:
     - testing
   pull_request:
     branches:
+    - testing
+    - master
 
 jobs:
   build:
