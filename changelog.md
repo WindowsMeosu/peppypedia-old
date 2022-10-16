@@ -1,3 +1,7 @@
+## peppypedia ver 0.2.6.8 (0.2.6)
+#### Open Beta
+#### 10/17/2022
+* some stuff
 ## peppypedia ver 0.2.6.7 (0.2.6)
 #### Open Beta
 #### 10/13/2022
