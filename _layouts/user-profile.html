@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+<html>
+  <head>
+    {% block head %}
+    <title>{{ username }} profile</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="description" content="{{username}}'s profile">
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+    <script>
+      //let pos = document.getElementById('user-details').getBoundingClientRect()
+      function show_details(){
+        hide_gqdata()
+        hide_backrooms()
+        
+        let details = document.getElementById('user-details')
+        details.classList.remove('fade-away')
+        details.classList.add('fade-in')
+      }
+
+      function hide_details(){
+        let details = document.getElementById('user-details')
+        details.classList.remove('fade-in')
+        details.classList.add('fade-away')
+      }
+
+      function show_gqdata(){
+        hide_details()
+        hide_backrooms()
+        
+        let gqdata = document.getElementById('gqdata')
+        gqdata.classList.remove('fade-away')
+        gqdata.classList.add('fade-in')
+      }
+
+      function hide_gqdata(){
+        let gqdata = document.getElementById('gqdata')
+        gqdata.classList.remove('fade-away')
+        gqdata.classList.add('fade-away')
+      }
+
+      function show_backrooms(){
+        hide_details()
+        hide_gqdata()
+
+        let backrooms = document.getElementById("backrooms")
+        backrooms.classList.remove('fade-away')
+        backrooms.classList.add('fade-in')
+      }
+
+      function hide_backrooms(){
+        let backrooms = document.getElementById("backrooms")
+        backrooms.classList.remove('fade-in')
+        backrooms.classList.add('fade-away')
+      }
+    </script>
+    <div style="margin-top: 3%;">
+      <img style="margin-left: auto; margin-right: auto; display: block;" src="{{profile_picture}}">
+      {% if request.cookies.get('userID') == id %}
+        <form action="/api/account/change-pfp" method="POST"><input type="text" name="url" value="url"></input><input type="submit" value="set"></form> 
+      {% endif %}
+      <h1 class="username">{{username}}</h1>
+    </div>
+    <div class="profile-info mx-auto">
+      <a style="margin: 10px;" onclick='show_details()'>Details</a>
+      {% if metadata["osu id"] != 0 %}
+        <a style="margin: 10px;" target=”_blank” href="https://osu.ppy.sh/users/{{metadata['osu id']}}">osu</a>
+      {% endif %}
+      {% if metadata["Gentry's Quest data"] != none %}
+        <a style="margin: 10px;" onclick='show_gqdata()'>Gentry's Quest</a>
+      {% endif %}
+      {% if metadata["backrooms_data"] != none %}
+        <a style="margin: 10px;" onclick='show_backrooms()'>The Backrooms</a>
+      {% endif %}
+    </div>
+    <div class="user-details" id="user-details">
+      <h1>About Me:</h1>
+      <h2>{{ metadata["about me"]|safe }}</h2>
+    </div>
+    <div class="osu!" id="gqdata">
+        <h1>{{metadata["Gentry's Quest data"]}}</h1>
+    </div>
+    <div class="backrooms" id="backrooms">
+      <h1>{{metadata["backrooms_data"]}}</h1>
+    </div>
+    {% endblock %}
+  </body>
+</html>
