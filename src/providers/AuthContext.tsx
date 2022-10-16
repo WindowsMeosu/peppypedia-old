@@ -5,7 +5,6 @@ const defaultUser = JSON.stringify({
   _id: "-1",
   authenticated: false,
   username: "Guest",
-  hasQueue: false,
   color: "#2196f3",
 });
 
