@@ -12,8 +12,8 @@
     <script>
       //let pos = document.getElementById('user-details').getBoundingClientRect()
       function show_details(){
-        hide_gqdata()
-        hide_backrooms()
+        hide_osudata()
+        hide_score()
         
         let details = document.getElementById('user-details')
         details.classList.remove('fade-away')
@@ -26,34 +26,34 @@
         details.classList.add('fade-away')
       }
 
-      function show_gqdata(){
+      function show_osudata(){
         hide_details()
-        hide_backrooms()
+        hide_score()
         
-        let gqdata = document.getElementById('gqdata')
-        gqdata.classList.remove('fade-away')
-        gqdata.classList.add('fade-in')
+        let osudata = document.getElementById('osudata')
+        osudata.classList.remove('fade-away')
+        osudata.classList.add('fade-in')
       }
 
-      function hide_gqdata(){
-        let gqdata = document.getElementById('gqdata')
-        gqdata.classList.remove('fade-away')
-        gqdata.classList.add('fade-away')
+      function hide_osudata(){
+        let osudata = document.getElementById('osudata')
+        osudata.classList.remove('fade-away')
+        osudata.classList.add('fade-away')
       }
 
-      function show_backrooms(){
+      function show_score(){
         hide_details()
-        hide_gqdata()
+        hide_osudata()
 
-        let backrooms = document.getElementById("backrooms")
-        backrooms.classList.remove('fade-away')
-        backrooms.classList.add('fade-in')
+        let backrooms = document.getElementById("score")
+        score.classList.remove('fade-away')
+        score.classList.add('fade-in')
       }
 
-      function hide_backrooms(){
-        let backrooms = document.getElementById("backrooms")
-        backrooms.classList.remove('fade-in')
-        backrooms.classList.add('fade-away')
+      function hide_score(){
+        let score = document.getElementById("score")
+        score.classList.remove('fade-in')
+        score.classList.add('fade-away')
       }
     </script>
     <div style="margin-top: 3%;">
@@ -68,8 +68,8 @@
       {% if metadata["osu id"] != 0 %}
         <a style="margin: 10px;" target=”_blank” href="https://osu.ppy.sh/users/{{metadata['osu id']}}">osu</a>
       {% endif %}
-      {% if metadata["Gentry's Quest data"] != none %}
-        <a style="margin: 10px;" onclick='show_gqdata()'>Gentry's Quest</a>
+      {% if metadata["score"] != none %}
+        <a style="margin: 10px;" onclick='score()'>score</a>
       {% endif %}
       {% if metadata["backrooms_data"] != none %}
         <a style="margin: 10px;" onclick='show_backrooms()'>The Backrooms</a>
@@ -79,11 +79,11 @@
       <h1>About Me:</h1>
       <h2>{{ metadata["about me"]|safe }}</h2>
     </div>
-    <div class="osu!" id="gqdata">
-        <h1>{{metadata["Gentry's Quest data"]}}</h1>
+    <div class="osu!" id="osudata">
+        <h1>{{metadata["osu! data"]}}</h1>
     </div>
-    <div class="backrooms" id="backrooms">
-      <h1>{{metadata["backrooms_data"]}}</h1>
+    <div class="ranked-score" id="score">
+      <h1>{{metadata["score"]}}</h1>
     </div>
     {% endblock %}
   </body>
