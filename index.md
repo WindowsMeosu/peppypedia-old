@@ -2,7 +2,7 @@
 layout: home
 author_profile: true
 ---
-#### you are visiting peppypedia-old, please consider using [the current state of peppypedia](https://windowsmeosu.github.io/peppypedia-old/). (of course it's your call or not)
+#### you are visiting peppypedia-old, please consider using [the current state of peppypedia](https://windowsmeosu.github.io/peppypedia/). (of course it's your call or not)
 # peppypedia
 _________________________________________________________________________________________________________________________________________________________________________
 peppypedia is a encylopedia for osu! with aims to bring player and beatmap information and all that cool stuff blah blah blah I'll expand this description in the future.</p>
