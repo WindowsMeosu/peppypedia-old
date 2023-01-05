@@ -1,0 +1,11 @@
+{
+  "name": "peppypedia-old",
+  "version": "2.6.8",
+  "description": "Up-to-date version of peppypedia-old which why the hell did you even install?",
+  "main": "index.md",
+  "author": "MiloTilo",
+  "license": "EPL",
+  "dependencies": {
+  "peppypedia-client": "^1.0.0"
+  }
+}
