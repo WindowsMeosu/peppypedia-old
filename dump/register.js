@@ -1,1 +1,0 @@
-window.alert("lmfao did you seriously expect an open-source website hosted on a static provider to have a working register form? at least wait until the client is done lol");
