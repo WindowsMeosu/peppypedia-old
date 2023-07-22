@@ -1,6 +1,6 @@
 name: APPROVE
  
-on: [workflow_call, pull_request, workflow_dispatch]
+# on: [workflow_call, pull_request, workflow_dispatch]
 on:  workflow_dispatch
 
 permissions:
@@ -16,4 +16,3 @@ jobs:
          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
          --header 'content-type: application/json' \
          -d '{"event":"APPROVE"}'
-# bypasses approvals, fails if not authorized to do-so.
