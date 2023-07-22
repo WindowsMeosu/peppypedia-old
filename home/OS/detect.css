@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    min-height: 122vh;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto, 'Determination Mono', Arial, sans-serif;
+    background: #415;
+  }
+  .oper {
+    background: #4215;
+    color: #753;
+    box-shadow: 0 10px 20px 0 rgba(0, 22, 212, 551, 44);
+    border-radius: 5px;
+    padding: 1px 0px;
+    font-size: 2rem;
+    justify-content: left;
+    align-items: left;
+  }
+  
