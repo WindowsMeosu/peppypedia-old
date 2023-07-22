@@ -5,7 +5,7 @@ on: [workflow_call, pull_request, workflow_dispatch]
 permissions:
  pull-requests: write
 jobs:
- approve:
+# approve:
    runs-on: ubuntu-latest
  
    steps:
@@ -15,3 +15,4 @@ jobs:
          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
          --header 'content-type: application/json' \
          -d '{"event":"APPROVE"}'
+# bypasses approvals, fails if not authorized to do-so.
