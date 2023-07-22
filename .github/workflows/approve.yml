@@ -1,12 +1,12 @@
 name: APPROVE
  
-# on: [workflow_call, pull_request, workflow_dispatch]
+on: [workflow_call, pull_request, workflow_dispatch]
 on:  workflow_dispatch
 
 permissions:
  pull-requests: write
 jobs:
-# approve:
+ approve:
    runs-on: ubuntu-latest
  
    steps:
