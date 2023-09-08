@@ -5,7 +5,7 @@ author_profile: true
 #### you are visiting peppypedia-old, please consider using [the current state of peppypedia](https://windowsmeosu.github.io/peppypedia/). (of course it's your call or not)
 # peppypedia
 
-<b><i>disqus comments are available [here](https://milotilo.ddns.net/peppypedia-old/index.html/disqus/index.html).</b></i>
+<b><i>disqus comments are available [here](https://milotilo.ddns.net/peppypedia-old/comments/index.html).</b></i>
 _________________________________________________________________________________________________________________________________________________________________________
 peppypedia is a encylopedia for osu! with aims to bring player and beatmap information and all that cool stuff blah blah blah I'll expand this description in the future.</p>
 # posts
