@@ -7,7 +7,8 @@ author_profile: true
 
 <b><i>disqus comments are available [here](https://milotilo.ddns.net/peppypedia-old/comments/index.html).</b></i>
 
-Starting September 22 (tomorrow), peppypedia will become a year old. On the night of tomorrow, I'll do a simple project tease as well as batch commits to peppypedia-old. To those who supported this project (literally 2 people), thank you. - Milo/Windows Me. (psst, thank you for reading this on peppypedia-old :3.)
+Today: the first year anniversary peppypedia!
+Yester: Starting September 22 (tomorrow), peppypedia will become a year old. On the night of tomorrow, I'll do a simple project tease as well as batch commits to peppypedia-old. To those who supported this project (literally 2 people), thank you. - Milo/Windows Me. (psst, thank you for reading this on peppypedia-old :3.)
 _________________________________________________________________________________________________________________________________________________________________________
 peppypedia is a encylopedia for osu! with aims to bring player and beatmap information and all that cool stuff blah blah blah I'll expand this description in the future.</p>
 # posts
