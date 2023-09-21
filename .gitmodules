@@ -1,0 +1,4 @@
+[submodule "peppypediac"]
+	path = docs
+	url = https://github.com/WindowsMeosu/peppypedia.git
+	branch = master
