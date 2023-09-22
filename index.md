@@ -7,6 +7,8 @@ author_profile: true
 
 <b><i>disqus comments are available [here](https://milotilo.ddns.net/peppypedia-old/comments/index.html).</b></i>
 
+peppypedia-old now uses a rather markdown-like design. Some header tags used on peppypedia-current do not exist.
+
 Today: the first year anniversary peppypedia!
 Yester: Starting September 22 (tomorrow), peppypedia will become a year old. On the night of tomorrow, I'll do a simple project tease as well as batch commits to peppypedia-old. To those who supported this project (literally 2 people), thank you. - Milo/Windows Me. (psst, thank you for reading this on peppypedia-old :3.)
 _________________________________________________________________________________________________________________________________________________________________________
