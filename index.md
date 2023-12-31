@@ -9,7 +9,7 @@ author_profile: true
 
 peppypedia-old now uses a rather markdown-like design. Some header tags used on peppypedia-current do not exist.
 
-Happy New Year!
+Happy New Years!
 _________________________________________________________________________________________________________________________________________________________________________
 peppypedia is a encylopedia for osu! with aims to bring player and beatmap information and all that cool stuff blah blah blah I'll expand this description in the future.</p>
 # posts
